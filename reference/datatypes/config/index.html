@@ -1,0 +1,4074 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.2">
+    
+    
+      
+        <title>Config - wmspy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f9400aa.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wmspy.datatypes.config" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="wmspy" class="md-header__button md-logo" aria-label="wmspy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            wmspy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Config
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="wmspy" class="md-nav__button md-logo" aria-label="wmspy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    wmspy
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../tutorials/">Tutorials</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../tutorials/importing/">Importing Data</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Importing Data" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Importing Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../tutorials/importing/config/">Configuration Settings</a>
+          
+            <label for="__nav_2_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Configuration Settings" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration Settings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/importing/config/manually/" class="md-nav__link">
+        manually
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/importing/config/from_yaml/" class="md-nav__link">
+        from_yaml
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" type="checkbox" id="__nav_2_2_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../tutorials/importing/meas/">Measured Data</a>
+          
+            <label for="__nav_2_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Measured Data" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Measured Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/importing/meas/from_tdms.ipynb" class="md-nav__link">
+        from_tdms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/importing/meas/from_csv.ipynb" class="md-nav__link">
+        from_csv
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">Code Reference</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Code Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Code Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Datatypes</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Datatypes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Datatypes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Config
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Config
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config" class="md-nav__link">
+    wmspy.datatypes.config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Channels" class="md-nav__link">
+    Channels
+  </a>
+  
+    <nav class="md-nav" aria-label="Channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Channels.get_channels" class="md-nav__link">
+    get_channels()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Daq" class="md-nav__link">
+    Daq
+  </a>
+  
+    <nav class="md-nav" aria-label="Daq">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Daq.nm" class="md-nav__link">
+    nm()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Daq.nm_float" class="md-nav__link">
+    nm_float()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Daq.ns" class="md-nav__link">
+    ns()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Daq.ns_float" class="md-nav__link">
+    ns_float()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Etalon" class="md-nav__link">
+    Etalon
+  </a>
+  
+    <nav class="md-nav" aria-label="Etalon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Etalon.nm" class="md-nav__link">
+    nm()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Etalon.nm_float" class="md-nav__link">
+    nm_float()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Etalon.ns" class="md-nav__link">
+    ns()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Etalon.ns_float" class="md-nav__link">
+    ns_float()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.EtalonConfig" class="md-nav__link">
+    EtalonConfig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.FileAndChannelHandler" class="md-nav__link">
+    FileAndChannelHandler
+  </a>
+  
+    <nav class="md-nav" aria-label="FileAndChannelHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.FileAndChannelHandler.get_channels" class="md-nav__link">
+    get_channels()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.FileAndChannelHandler.get_file_channel_pairs" class="md-nav__link">
+    get_file_channel_pairs()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.FileAndChannelHandler.get_files" class="md-nav__link">
+    get_files()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Files" class="md-nav__link">
+    Files
+  </a>
+  
+    <nav class="md-nav" aria-label="Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Files.get_files" class="md-nav__link">
+    get_files()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Filters" class="md-nav__link">
+    Filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Laser" class="md-nav__link">
+    Laser
+  </a>
+  
+    <nav class="md-nav" aria-label="Laser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Laser.Tm" class="md-nav__link">
+    Tm()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Laser.Ts" class="md-nav__link">
+    Ts()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Laser.mods_per_scan" class="md-nav__link">
+    mods_per_scan()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.MeasurementConfig" class="md-nav__link">
+    MeasurementConfig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.TotalConfig" class="md-nav__link">
+    TotalConfig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.WMSConfig" class="md-nav__link">
+    WMSConfig
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spectral/" class="md-nav__link">
+        Spectral
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../models/">Models</a>
+          
+            <label for="__nav_3_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Models" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Models
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/periodic/" class="md-nav__link">
+        Periodic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/etalon/" class="md-nav__link">
+        Etalon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/spectral/" class="md-nav__link">
+        Spectral
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/transmission/" class="md-nav__link">
+        Transmission
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/utilities/" class="md-nav__link">
+        Utilities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../processing/">Processing</a>
+          
+            <label for="__nav_3_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Processing" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Processing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing/indexing/" class="md-nav__link">
+        Indexing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing/filtering/" class="md-nav__link">
+        Filtering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_4" type="checkbox" id="__nav_3_4_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../processing/etalon/">Etalon</a>
+          
+            <label for="__nav_3_4_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Etalon" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Etalon
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing/etalon/etalondata/" class="md-nav__link">
+        EtalonData
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing/etalon/intensityfitting/" class="md-nav__link">
+        IntensityFitting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processing/etalon/turnfinding/" class="md-nav__link">
+        TurnFinding
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wms/" class="md-nav__link">
+        WMS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utilities/" class="md-nav__link">
+        Utilities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config" class="md-nav__link">
+    wmspy.datatypes.config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Channels" class="md-nav__link">
+    Channels
+  </a>
+  
+    <nav class="md-nav" aria-label="Channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Channels.get_channels" class="md-nav__link">
+    get_channels()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Daq" class="md-nav__link">
+    Daq
+  </a>
+  
+    <nav class="md-nav" aria-label="Daq">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Daq.nm" class="md-nav__link">
+    nm()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Daq.nm_float" class="md-nav__link">
+    nm_float()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Daq.ns" class="md-nav__link">
+    ns()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Daq.ns_float" class="md-nav__link">
+    ns_float()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Etalon" class="md-nav__link">
+    Etalon
+  </a>
+  
+    <nav class="md-nav" aria-label="Etalon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Etalon.nm" class="md-nav__link">
+    nm()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Etalon.nm_float" class="md-nav__link">
+    nm_float()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Etalon.ns" class="md-nav__link">
+    ns()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Etalon.ns_float" class="md-nav__link">
+    ns_float()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.EtalonConfig" class="md-nav__link">
+    EtalonConfig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.FileAndChannelHandler" class="md-nav__link">
+    FileAndChannelHandler
+  </a>
+  
+    <nav class="md-nav" aria-label="FileAndChannelHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.FileAndChannelHandler.get_channels" class="md-nav__link">
+    get_channels()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.FileAndChannelHandler.get_file_channel_pairs" class="md-nav__link">
+    get_file_channel_pairs()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.FileAndChannelHandler.get_files" class="md-nav__link">
+    get_files()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Files" class="md-nav__link">
+    Files
+  </a>
+  
+    <nav class="md-nav" aria-label="Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Files.get_files" class="md-nav__link">
+    get_files()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Filters" class="md-nav__link">
+    Filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Laser" class="md-nav__link">
+    Laser
+  </a>
+  
+    <nav class="md-nav" aria-label="Laser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Laser.Tm" class="md-nav__link">
+    Tm()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Laser.Ts" class="md-nav__link">
+    Ts()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.Laser.mods_per_scan" class="md-nav__link">
+    mods_per_scan()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.MeasurementConfig" class="md-nav__link">
+    MeasurementConfig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.TotalConfig" class="md-nav__link">
+    TotalConfig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wmspy.datatypes.config.WMSConfig" class="md-nav__link">
+    WMSConfig
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Config</h1>
+
+<div class="doc doc-object doc-module">
+
+
+<a id="wmspy.datatypes.config"></a>
+  <div class="doc doc-contents first">
+  
+      <p>This module allows for the creation of configuration settings objects.
+These objects can be created manually or imported from yaml files.</p>
+<p>The following _ChildConfig classes hold settings of a specific type:</p>
+<ul>
+<li><code>Laser</code> - Holds the laser settings (e.g. scan and modulation frequencies)</li>
+<li><code>Daq</code> - Data acquisition settings (e.g. sample rate and depth)</li>
+<li><code>Etalon</code> - Etalon acquisition settings (e.g. sample rate and depth) </li>
+<li><code>Filters</code> - Filter settings (e.g. passband, stopband, passripple, ...)</li>
+<li>'Files' - Files to import </li>
+<li>'Channels' - Channels of files to import</li>
+</ul>
+<p>The following _ParentConfig classes group together _ChildConfig objects:</p>
+<ul>
+<li>'TotalConfig' - Contains all _ChildConfig classes</li>
+<li>'EtalonConfig' - Contains _ChildConfigs necessary for etalon processing</li>
+<li>'MeasurementConfig' - Contains _ChildConfigs necessary for measurement importing</li>
+<li>'WMSConfig' - Contains _ChildConfigs necessary for wms processing</li>
+</ul>
+<p>The FileAndChannelHandler class pairs files and channels from _ChildConfigs for importing</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wmspy.datatypes.config.Channels" class="doc doc-heading">
+        <code>Channels</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="wmspy.datatypes.config._ChildConfig">_ChildConfig</span></code></p>
+
+  
+      <p>Holds the channel identifiers or indices to import.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>et</code></td>
+          <td>
+                <code><span title="typing.List">List</span></code>
+          </td>
+          <td><p>Etalon channels</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ref</code></td>
+          <td>
+                <code><span title="typing.List">List</span></code>
+          </td>
+          <td><p>Reference channels</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bkg</code></td>
+          <td>
+                <code><span title="typing.List">List</span></code>
+          </td>
+          <td><p>Background channels</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>meas</code></td>
+          <td>
+                <code><span title="typing.List">List</span></code>
+          </td>
+          <td><p>Measurement channels</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>dark</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>]</code>
+          </td>
+          <td><p>Dark channels</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        <details class="quote">
+          <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">Channels</span><span class="p">(</span><span class="n">_ChildConfig</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Holds the channel identifiers or indices to import.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        et: Etalon channels</span>
+<span class="sd">        ref: Reference channels</span>
+<span class="sd">        bkg: Background channels</span>
+<span class="sd">        meas: Measurement channels</span>
+<span class="sd">        dark: Dark channels</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">et</span>      <span class="p">:</span> <span class="n">List</span>
+    <span class="n">ref</span>     <span class="p">:</span> <span class="n">List</span>
+    <span class="n">bkg</span>     <span class="p">:</span> <span class="n">List</span>
+    <span class="n">meas</span>    <span class="p">:</span> <span class="n">List</span>
+    <span class="n">dark</span>    <span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">get_channels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meas_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Get channels of a certain type returned as a list.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            meas_type: attribute of Files (e.g. &#39;et&#39;, &#39;ref&#39;, &#39;bkg&#39;, &#39;meas&#39;, or &#39;dark&#39;)</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            channels list            </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">channels</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meas_type</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">channels</span><span class="p">,]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channels</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="k">else</span> <span class="n">channels</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.Channels.get_channels" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_channels</span><span class="p">(</span><span class="n">meas_type</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get channels of a certain type returned as a list.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>meas_type</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>attribute of Files (e.g. 'et', 'ref', 'bkg', 'meas', or 'dark')</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.List">List</span></code>
+          </td>
+          <td><p>channels list</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_channels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meas_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Get channels of a certain type returned as a list.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        meas_type: attribute of Files (e.g. &#39;et&#39;, &#39;ref&#39;, &#39;bkg&#39;, &#39;meas&#39;, or &#39;dark&#39;)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        channels list            </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">channels</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meas_type</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">channels</span><span class="p">,]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channels</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="k">else</span> <span class="n">channels</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wmspy.datatypes.config.Daq" class="doc doc-heading">
+        <code>Daq</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="wmspy.datatypes.config._ChildConfig">_ChildConfig</span></code></p>
+
+  
+      <p>Holds data acquisition settings. </p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>sr</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td><p>Sample Rate (Hz)</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>pre</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td><p>Pretrigger points to remove</p></td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>npoints</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td><p>Number of post-trigger points (used for filter design)</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        <details class="quote">
+          <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">Daq</span><span class="p">(</span><span class="n">_ChildConfig</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Holds data acquisition settings. </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        sr: Sample Rate (Hz)</span>
+<span class="sd">        pre: Pretrigger points to remove</span>
+<span class="sd">        npoints: Number of post-trigger points (used for filter design)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sr</span>  <span class="p">:</span> <span class="nb">float</span>
+    <span class="n">pre</span> <span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">npoints</span> <span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ns_float</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Number of scans (float). &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sr</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">parentconfig</span><span class="o">.</span><span class="n">laser</span><span class="o">.</span><span class="n">fs</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ns</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Number of scans rounded to nearest int. &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ns_float</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nm_float</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Number of modulations (float). &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">sr</span> <span class="o">/</span> <span class="n">fm_</span> <span class="k">for</span> <span class="n">fm_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">parentconfig</span><span class="o">.</span><span class="n">laser</span><span class="o">.</span><span class="n">fm</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nm</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Number of modulations rounded to nearest int. &quot;&quot;&quot;</span> 
+        <span class="k">return</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">nm_</span><span class="p">))</span> <span class="k">for</span> <span class="n">nm_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nm_float</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.Daq.nm" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">nm</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Number of modulations rounded to nearest int.</p>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">nm</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Number of modulations rounded to nearest int. &quot;&quot;&quot;</span> 
+    <span class="k">return</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">nm_</span><span class="p">))</span> <span class="k">for</span> <span class="n">nm_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nm_float</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.Daq.nm_float" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">nm_float</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Number of modulations (float).</p>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">nm_float</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Number of modulations (float). &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">sr</span> <span class="o">/</span> <span class="n">fm_</span> <span class="k">for</span> <span class="n">fm_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">parentconfig</span><span class="o">.</span><span class="n">laser</span><span class="o">.</span><span class="n">fm</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.Daq.ns" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ns</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Number of scans rounded to nearest int.</p>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">ns</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Number of scans rounded to nearest int. &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ns_float</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.Daq.ns_float" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ns_float</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Number of scans (float).</p>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">ns_float</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Number of scans (float). &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sr</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">parentconfig</span><span class="o">.</span><span class="n">laser</span><span class="o">.</span><span class="n">fs</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wmspy.datatypes.config.Etalon" class="doc doc-heading">
+        <code>Etalon</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="wmspy.datatypes.config._ChildConfig">_ChildConfig</span></code></p>
+
+  
+      <p>Holds etalon acquisition settings. </p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>sr</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td><p>Sample Rate (Hz)</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>fsr</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td><p>Free-Spectral-Range of the etalon (cm-1)</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>pre</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td><p>Pretrigger points to remove</p></td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>npoints</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td><p>Number of post-trigger points (used for filter design)</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        <details class="quote">
+          <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">Etalon</span><span class="p">(</span><span class="n">_ChildConfig</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Holds etalon acquisition settings. </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        sr: Sample Rate (Hz)</span>
+<span class="sd">        fsr: Free-Spectral-Range of the etalon (cm-1)</span>
+<span class="sd">        pre: Pretrigger points to remove</span>
+<span class="sd">        npoints: Number of post-trigger points (used for filter design)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sr</span>  <span class="p">:</span> <span class="nb">float</span>
+    <span class="n">fsr</span> <span class="p">:</span> <span class="nb">float</span>
+    <span class="n">pre</span> <span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">npoints</span> <span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ns_float</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Number of scans (float). &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sr</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">parentconfig</span><span class="o">.</span><span class="n">laser</span><span class="o">.</span><span class="n">fs</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ns</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Number of scans rounded to nearest int. &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ns_float</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nm_float</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Number of modulations (float). &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">sr</span> <span class="o">/</span> <span class="n">fm_</span> <span class="k">for</span> <span class="n">fm_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">parentconfig</span><span class="o">.</span><span class="n">laser</span><span class="o">.</span><span class="n">fm</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nm</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Number of modulations rounded to nearest int. &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">nm_</span><span class="p">))</span> <span class="k">for</span> <span class="n">nm_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nm_float</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.Etalon.nm" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">nm</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Number of modulations rounded to nearest int.</p>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">nm</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Number of modulations rounded to nearest int. &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">nm_</span><span class="p">))</span> <span class="k">for</span> <span class="n">nm_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nm_float</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.Etalon.nm_float" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">nm_float</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Number of modulations (float).</p>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">nm_float</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Number of modulations (float). &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">sr</span> <span class="o">/</span> <span class="n">fm_</span> <span class="k">for</span> <span class="n">fm_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">parentconfig</span><span class="o">.</span><span class="n">laser</span><span class="o">.</span><span class="n">fm</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.Etalon.ns" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ns</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Number of scans rounded to nearest int.</p>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">ns</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Number of scans rounded to nearest int. &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ns_float</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.Etalon.ns_float" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ns_float</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Number of scans (float).</p>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">ns_float</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Number of scans (float). &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sr</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">parentconfig</span><span class="o">.</span><span class="n">laser</span><span class="o">.</span><span class="n">fs</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wmspy.datatypes.config.EtalonConfig" class="doc doc-heading">
+        <code>EtalonConfig</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="wmspy.datatypes.config._ParentConfig">_ParentConfig</span></code></p>
+
+  
+      <p>Holds _ChildConfigs necessary for etalon processing.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>laser</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Laser" href="#wmspy.datatypes.config.Laser">Laser</a></code>
+          </td>
+          <td><p>Laser _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>etalon</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Etalon" href="#wmspy.datatypes.config.Etalon">Etalon</a></code>
+          </td>
+          <td><p>Etalon _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>files</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Files" href="#wmspy.datatypes.config.Files">Files</a></code>
+          </td>
+          <td><p>Files _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>channels</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Channels" href="#wmspy.datatypes.config.Channels">Channels</a></code>
+          </td>
+          <td><p>Channels _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>folder</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>location of files</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        <details class="quote">
+          <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">EtalonConfig</span><span class="p">(</span><span class="n">_ParentConfig</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Holds _ChildConfigs necessary for etalon processing.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        laser: Laser _ChildConfig</span>
+<span class="sd">        etalon: Etalon _ChildConfig</span>
+<span class="sd">        files: Files _ChildConfig</span>
+<span class="sd">        channels: Channels _ChildConfig</span>
+<span class="sd">        folder: location of files</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">laser</span> <span class="p">:</span> <span class="n">Laser</span>
+    <span class="n">etalon</span> <span class="p">:</span> <span class="n">Etalon</span>
+    <span class="n">files</span> <span class="p">:</span> <span class="n">Files</span>
+    <span class="n">channels</span> <span class="p">:</span> <span class="n">Channels</span>
+    <span class="n">folder</span> <span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wmspy.datatypes.config.FileAndChannelHandler" class="doc doc-heading">
+        <code>FileAndChannelHandler</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Pairs files and channels from _ChildConfigs for importing</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>cfg</code></td>
+          <td>
+                <code><span title="wmspy.datatypes.config._ParentConfig">_ParentConfig</span></code>
+          </td>
+          <td><p>_ParentConfig object</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>meas_type</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>attribute type to pair (e.g. 'et', 'ref', 'bkg', 'meas', or 'dark')</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        <details class="quote">
+          <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span>
+<span class="normal">440</span>
+<span class="normal">441</span>
+<span class="normal">442</span>
+<span class="normal">443</span>
+<span class="normal">444</span>
+<span class="normal">445</span>
+<span class="normal">446</span>
+<span class="normal">447</span>
+<span class="normal">448</span>
+<span class="normal">449</span>
+<span class="normal">450</span>
+<span class="normal">451</span>
+<span class="normal">452</span>
+<span class="normal">453</span>
+<span class="normal">454</span>
+<span class="normal">455</span>
+<span class="normal">456</span>
+<span class="normal">457</span>
+<span class="normal">458</span>
+<span class="normal">459</span>
+<span class="normal">460</span>
+<span class="normal">461</span>
+<span class="normal">462</span>
+<span class="normal">463</span>
+<span class="normal">464</span>
+<span class="normal">465</span>
+<span class="normal">466</span>
+<span class="normal">467</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">FileAndChannelHandler</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Pairs files and channels from _ChildConfigs for importing</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg: _ParentConfig object</span>
+<span class="sd">        meas_type: attribute type to pair (e.g. &#39;et&#39;, &#39;ref&#39;, &#39;bkg&#39;, &#39;meas&#39;, or &#39;dark&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cfg</span> <span class="p">:</span> <span class="n">_ParentConfig</span>
+    <span class="n">meas_type</span> <span class="p">:</span> <span class="nb">str</span>
+
+    <span class="k">def</span> <span class="nf">get_files</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Get files of type self.meas_type returned as a list. </span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            files list</span>
+<span class="sd">        &quot;&quot;&quot;</span> 
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">get_files</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meas_type</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_channels</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Get channels of type self.meas_type returned as a list. </span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            channels list</span>
+<span class="sd">        &quot;&quot;&quot;</span> 
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">get_channels</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meas_type</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_file_channel_pairs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot; Get files and channels of type self.meas_type paired as tuples. </span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list of paired tuples [(file1,channel1), (file2,channel2), ...]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_files</span><span class="p">()</span>
+        <span class="n">channels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_channels</span><span class="p">()</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_combine_folder_and_files</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
+        <span class="n">files</span><span class="p">,</span> <span class="n">channels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_adjust_list_sizes</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">channels</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_zip_files_and_channels_to_list</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">channels</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_adjust_list_sizes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">files</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">channels</span><span class="p">:</span> <span class="n">List</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Ensure file and channel list sizes match. &quot;&quot;&quot;</span>
+        <span class="n">nf</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
+        <span class="n">nc</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">channels</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nf</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;No files given of type </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">meas_type</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nc</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;No channels given of type </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">meas_type</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nf</span> <span class="o">==</span> <span class="n">nc</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">files</span><span class="p">,</span> <span class="n">channels</span>
+        <span class="k">elif</span> <span class="n">nf</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">files</span><span class="o">*</span><span class="n">nc</span><span class="p">,</span> <span class="n">channels</span>
+        <span class="k">elif</span> <span class="n">nc</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">files</span><span class="p">,</span> <span class="n">channels</span><span class="o">*</span><span class="n">nf</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Files and channels have different sizes which cannot be easily mapped together.  </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span><span class="si">=}</span><span class="s1">, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">channels</span><span class="p">)</span><span class="si">=}</span><span class="s1">.&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_zip_files_and_channels_to_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">files</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">channels</span><span class="p">:</span> <span class="n">List</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">]:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="p">[(</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">channels</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">f</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">c</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">output</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Only NoneTypes given for at least one entry in each file/channel pair of type </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">meas_type</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output</span>
+
+    <span class="k">def</span> <span class="nf">_combine_folder_and_files</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">files</span><span class="p">:</span> <span class="n">List</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">folder</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">files</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">folder</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">f</span><span class="p">))</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.FileAndChannelHandler.get_channels" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_channels</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get channels of type self.meas_type returned as a list. </p>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.List">List</span></code>
+          </td>
+          <td><p>channels list</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_channels</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Get channels of type self.meas_type returned as a list. </span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        channels list</span>
+<span class="sd">    &quot;&quot;&quot;</span> 
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">get_channels</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meas_type</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.FileAndChannelHandler.get_file_channel_pairs" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_file_channel_pairs</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get files and channels of type self.meas_type paired as tuples. </p>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.List">List</span>[<span title="typing.Tuple">Tuple</span>]</code>
+          </td>
+          <td><p>list of paired tuples [(file1,channel1), (file2,channel2), ...]</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_file_channel_pairs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot; Get files and channels of type self.meas_type paired as tuples. </span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        list of paired tuples [(file1,channel1), (file2,channel2), ...]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_files</span><span class="p">()</span>
+    <span class="n">channels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_channels</span><span class="p">()</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_combine_folder_and_files</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
+    <span class="n">files</span><span class="p">,</span> <span class="n">channels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_adjust_list_sizes</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">channels</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_zip_files_and_channels_to_list</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">channels</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.FileAndChannelHandler.get_files" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_files</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get files of type self.meas_type returned as a list. </p>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.List">List</span></code>
+          </td>
+          <td><p>files list</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_files</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Get files of type self.meas_type returned as a list. </span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        files list</span>
+<span class="sd">    &quot;&quot;&quot;</span> 
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">get_files</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meas_type</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wmspy.datatypes.config.Files" class="doc doc-heading">
+        <code>Files</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="wmspy.datatypes.config._ChildConfig">_ChildConfig</span></code></p>
+
+  
+      <p>Hold the files to import.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>et</code></td>
+          <td>
+                <code><span title="typing.List">List</span></code>
+          </td>
+          <td><p>Etalon files</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ref</code></td>
+          <td>
+                <code><span title="typing.List">List</span></code>
+          </td>
+          <td><p>Reference files</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bkg</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>Background file</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>meas</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>Measurement file</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>dark</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>Dark file</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        <details class="quote">
+          <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">Files</span><span class="p">(</span><span class="n">_ChildConfig</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Hold the files to import.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        et: Etalon files</span>
+<span class="sd">        ref: Reference files</span>
+<span class="sd">        bkg: Background file</span>
+<span class="sd">        meas: Measurement file</span>
+<span class="sd">        dark: Dark file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">et</span>      <span class="p">:</span> <span class="n">List</span>
+    <span class="n">ref</span>     <span class="p">:</span> <span class="n">List</span>
+    <span class="n">bkg</span>     <span class="p">:</span> <span class="nb">str</span>
+    <span class="n">meas</span>    <span class="p">:</span> <span class="nb">str</span>
+    <span class="n">dark</span>    <span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">get_files</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meas_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Get files of a certain type returned as a list. </span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            meas_type: attribute of Files (e.g. &#39;et&#39;, &#39;ref&#39;, &#39;bkg&#39;, &#39;meas&#39;, or &#39;dark&#39;)</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            files list</span>
+<span class="sd">        &quot;&quot;&quot;</span> 
+        <span class="n">files</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meas_type</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">files</span><span class="p">,]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">files</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.Files.get_files" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_files</span><span class="p">(</span><span class="n">meas_type</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get files of a certain type returned as a list. </p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>meas_type</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>attribute of Files (e.g. 'et', 'ref', 'bkg', 'meas', or 'dark')</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.List">List</span></code>
+          </td>
+          <td><p>files list</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_files</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meas_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Get files of a certain type returned as a list. </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        meas_type: attribute of Files (e.g. &#39;et&#39;, &#39;ref&#39;, &#39;bkg&#39;, &#39;meas&#39;, or &#39;dark&#39;)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        files list</span>
+<span class="sd">    &quot;&quot;&quot;</span> 
+    <span class="n">files</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meas_type</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">files</span><span class="p">,]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">files</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wmspy.datatypes.config.Filters" class="doc doc-heading">
+        <code>Filters</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="wmspy.datatypes.config._ChildConfig">_ChildConfig</span></code></p>
+
+  
+      <p>Hold the filter settings. </p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>passband</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td><p>pass frequency (Hz)</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>stopband</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td><p>stop frequency (Hz)</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>passripple</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td><p>ripple in the passband (dB)</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>stopripple</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td><p>ripple in the stopband (dB)</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>nharmonics</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td><p>number of harmonic filters to generate</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>multirate</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td><p>whether to use multistage-multirate (True) or single-stage (False) filters</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>fir</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td><p>whether to use fir (True) or iir (False) filters</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ftype</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>name of filter type (e.g. 'kais', 'cheb2')</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        <details class="quote">
+          <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">Filters</span><span class="p">(</span><span class="n">_ChildConfig</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Hold the filter settings. </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        passband: pass frequency (Hz)</span>
+<span class="sd">        stopband: stop frequency (Hz)</span>
+<span class="sd">        passripple: ripple in the passband (dB)</span>
+<span class="sd">        stopripple: ripple in the stopband (dB)</span>
+<span class="sd">        nharmonics: number of harmonic filters to generate</span>
+<span class="sd">        multirate: whether to use multistage-multirate (True) or single-stage (False) filters</span>
+<span class="sd">        fir: whether to use fir (True) or iir (False) filters</span>
+<span class="sd">        ftype: name of filter type (e.g. &#39;kais&#39;, &#39;cheb2&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">passband</span>    <span class="p">:</span> <span class="nb">float</span>
+    <span class="n">stopband</span>    <span class="p">:</span> <span class="nb">float</span>
+    <span class="n">passripple</span>  <span class="p">:</span> <span class="nb">float</span>
+    <span class="n">stopripple</span>  <span class="p">:</span> <span class="nb">float</span>
+    <span class="n">nharmonics</span>  <span class="p">:</span> <span class="nb">int</span>
+    <span class="n">multirate</span>   <span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">fir</span>         <span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">ftype</span>       <span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wmspy.datatypes.config.Laser" class="doc doc-heading">
+        <code>Laser</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="wmspy.datatypes.config._ChildConfig">_ChildConfig</span></code></p>
+
+  
+      <p>Holds laser settings. </p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>fs</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td><p>Scan frequency (Hz)</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>fm</code></td>
+          <td>
+                <code><span title="typing.List">List</span></code>
+          </td>
+          <td><p>Modulation frequencies (Hz)</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        <details class="quote">
+          <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">Laser</span><span class="p">(</span><span class="n">_ChildConfig</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Holds laser settings. </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        fs: Scan frequency (Hz)</span>
+<span class="sd">        fm: Modulation frequencies (Hz)        </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fs</span>  <span class="p">:</span> <span class="nb">float</span>
+    <span class="n">fm</span>  <span class="p">:</span> <span class="n">List</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Ts</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Scan period (s) &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="mf">1.0</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">fs</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Tm</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Modulation period (s) &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="mf">1.0</span><span class="o">/</span><span class="n">fm_</span> <span class="k">for</span> <span class="n">fm_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fm</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">mods_per_scan</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Modulations per scan (float). &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">fm_</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">fs</span> <span class="k">for</span> <span class="n">fm_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fm</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.Laser.Tm" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">Tm</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Modulation period (s)</p>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">Tm</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Modulation period (s) &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="mf">1.0</span><span class="o">/</span><span class="n">fm_</span> <span class="k">for</span> <span class="n">fm_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fm</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.Laser.Ts" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">Ts</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Scan period (s)</p>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">96</span>
+<span class="normal">97</span>
+<span class="normal">98</span>
+<span class="normal">99</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">Ts</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Scan period (s) &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mf">1.0</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">fs</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="wmspy.datatypes.config.Laser.mods_per_scan" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">mods_per_scan</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Modulations per scan (float).</p>
+
+      <details class="quote">
+        <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">mods_per_scan</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Modulations per scan (float). &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">fm_</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">fs</span> <span class="k">for</span> <span class="n">fm_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fm</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wmspy.datatypes.config.MeasurementConfig" class="doc doc-heading">
+        <code>MeasurementConfig</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="wmspy.datatypes.config._ParentConfig">_ParentConfig</span></code></p>
+
+  
+      <p>Holds _ChildConfigs necessary for measurment importing.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>laser</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Laser" href="#wmspy.datatypes.config.Laser">Laser</a></code>
+          </td>
+          <td><p>Laser _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>daq</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Daq" href="#wmspy.datatypes.config.Daq">Daq</a></code>
+          </td>
+          <td><p>Daq _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>files</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Files" href="#wmspy.datatypes.config.Files">Files</a></code>
+          </td>
+          <td><p>Files _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>channels</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Channels" href="#wmspy.datatypes.config.Channels">Channels</a></code>
+          </td>
+          <td><p>Channels _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>folder</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>location of files</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        <details class="quote">
+          <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">MeasurementConfig</span><span class="p">(</span><span class="n">_ParentConfig</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Holds _ChildConfigs necessary for measurment importing.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        laser: Laser _ChildConfig</span>
+<span class="sd">        daq: Daq _ChildConfig</span>
+<span class="sd">        files: Files _ChildConfig</span>
+<span class="sd">        channels: Channels _ChildConfig</span>
+<span class="sd">        folder: location of files</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">laser</span> <span class="p">:</span> <span class="n">Laser</span>
+    <span class="n">daq</span> <span class="p">:</span> <span class="n">Daq</span>
+    <span class="n">files</span> <span class="p">:</span> <span class="n">Files</span>
+    <span class="n">channels</span> <span class="p">:</span> <span class="n">Channels</span>
+    <span class="n">folder</span> <span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wmspy.datatypes.config.TotalConfig" class="doc doc-heading">
+        <code>TotalConfig</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="wmspy.datatypes.config._ParentConfig">_ParentConfig</span></code></p>
+
+  
+      <p>Holds all _ChildConfigs.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>laser</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Laser" href="#wmspy.datatypes.config.Laser">Laser</a></code>
+          </td>
+          <td><p>Laser _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>daq</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Daq" href="#wmspy.datatypes.config.Daq">Daq</a></code>
+          </td>
+          <td><p>Daq _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>etalon</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Etalon" href="#wmspy.datatypes.config.Etalon">Etalon</a></code>
+          </td>
+          <td><p>Etalon _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>filters</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Filters" href="#wmspy.datatypes.config.Filters">Filters</a></code>
+          </td>
+          <td><p>Filters _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>files</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Files" href="#wmspy.datatypes.config.Files">Files</a></code>
+          </td>
+          <td><p>Files _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>channels</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Channels" href="#wmspy.datatypes.config.Channels">Channels</a></code>
+          </td>
+          <td><p>Channels _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>folder</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>location of files</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        <details class="quote">
+          <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">TotalConfig</span><span class="p">(</span><span class="n">_ParentConfig</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Holds all _ChildConfigs.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        laser: Laser _ChildConfig</span>
+<span class="sd">        daq: Daq _ChildConfig</span>
+<span class="sd">        etalon: Etalon _ChildConfig</span>
+<span class="sd">        filters: Filters _ChildConfig</span>
+<span class="sd">        files: Files _ChildConfig</span>
+<span class="sd">        channels: Channels _ChildConfig</span>
+<span class="sd">        folder: location of files</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">laser</span> <span class="p">:</span> <span class="n">Laser</span>
+    <span class="n">daq</span> <span class="p">:</span> <span class="n">Daq</span>
+    <span class="n">etalon</span> <span class="p">:</span> <span class="n">Etalon</span>
+    <span class="n">filters</span> <span class="p">:</span> <span class="n">Filters</span>
+    <span class="n">files</span> <span class="p">:</span> <span class="n">Files</span>
+    <span class="n">channels</span> <span class="p">:</span> <span class="n">Channels</span>
+    <span class="n">folder</span> <span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="wmspy.datatypes.config.WMSConfig" class="doc doc-heading">
+        <code>WMSConfig</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="wmspy.datatypes.config._ParentConfig">_ParentConfig</span></code></p>
+
+  
+      <p>Holds _ChildConfigs necessary for wms processing.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>laser</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Laser" href="#wmspy.datatypes.config.Laser">Laser</a></code>
+          </td>
+          <td><p>Laser _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>daq</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Daq" href="#wmspy.datatypes.config.Daq">Daq</a></code>
+          </td>
+          <td><p>Daq _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>filters</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Filters" href="#wmspy.datatypes.config.Filters">Filters</a></code>
+          </td>
+          <td><p>Filters _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>files</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Files" href="#wmspy.datatypes.config.Files">Files</a></code>
+          </td>
+          <td><p>Files _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>channels</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="wmspy.datatypes.config.Channels" href="#wmspy.datatypes.config.Channels">Channels</a></code>
+          </td>
+          <td><p>Channels _ChildConfig</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>folder</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>location of files</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        <details class="quote">
+          <summary>Source code in <code>wmspy\datatypes\config.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">WMSConfig</span><span class="p">(</span><span class="n">_ParentConfig</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Holds _ChildConfigs necessary for wms processing.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        laser: Laser _ChildConfig</span>
+<span class="sd">        daq: Daq _ChildConfig</span>
+<span class="sd">        filters: Filters _ChildConfig</span>
+<span class="sd">        files: Files _ChildConfig</span>
+<span class="sd">        channels: Channels _ChildConfig</span>
+<span class="sd">        folder: location of files</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">laser</span> <span class="p">:</span> <span class="n">Laser</span>
+    <span class="n">daq</span> <span class="p">:</span> <span class="n">Daq</span>
+    <span class="n">filters</span> <span class="p">:</span> <span class="n">Filters</span>
+    <span class="n">files</span> <span class="p">:</span> <span class="n">Files</span>
+    <span class="n">channels</span> <span class="p">:</span> <span class="n">Channels</span>
+    <span class="n">folder</span> <span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Datatypes" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Datatypes
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../data/" class="md-footer__link md-footer__link--next" aria-label="Next: Data" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Data
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.indexes", "toc.follow"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.39f04ddb.min.js"></script>
+      
+    
+  </body>
+</html>
