@@ -1,0 +1,5 @@
+min_prominence  : 0.75
+min_width       : 2
+min_height      : 1.5
+min_npeaks      : 3
+max_nfev        : 5

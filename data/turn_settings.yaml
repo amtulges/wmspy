@@ -1,0 +1,4 @@
+min_prominence  : 0.5
+min_width       : 2
+check_neighbors : 3
+max_nfev        : 5

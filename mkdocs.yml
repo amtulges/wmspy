@@ -1,0 +1,57 @@
+site_name: wmspy
+
+theme:
+    name: "material"
+    features:
+        - navigation.sections
+        - navigation.indexes
+        - toc.follow
+        
+plugins:
+    - mkdocstrings 
+    - mkdocs-jupyter 
+    
+markdown_extensions:
+  - toc:
+      title: On this page
+
+nav:
+    - 'Home': index.md 
+    - Tutorials:
+        - 'Tutorials': tutorials/index.md 
+        - Importing Data:
+            - 'Importing Data': tutorials/importing/index.md
+            - Configuration Settings:
+                - 'Configuration Settings': tutorials/importing/config/index.md
+                - 'manually': tutorials/importing/config/manually.ipynb
+                - 'from_yaml': tutorials/importing/config/from_yaml.ipynb 
+            - Measured Data:
+                - 'Measured Data': tutorials/importing/meas/index.md
+                - 'from_tdms': tutorials/importing/meas/from_tdms.ipynb 
+                - 'from_csv': tutorials/importing/meas/from_csv.ipynb 
+    - Code Reference:
+        - 'Code Reference': reference/index.md
+        - Datatypes: 
+            - 'Datatypes': reference/datatypes/index.md
+            - 'Config': reference/datatypes/config.md 
+            - 'Data': reference/datatypes/data.md 
+            - 'Spectral': reference/datatypes/spectral.md 
+        - Models: 
+            - 'Models': reference/models/index.md 
+            - 'Periodic': reference/models/periodic.md 
+            - 'Etalon': reference/models/etalon.md 
+            - 'Spectral': reference/models/spectral.md 
+            - 'Transmission': reference/models/transmission.md 
+            - 'Utilities': reference/models/utilities.md 
+        - Processing: 
+            - 'Processing': reference/processing/index.md 
+            - 'Indexing': reference/processing/indexing.md 
+            - 'Filtering': reference/processing/filtering.md 
+            - Etalon:
+                - 'Etalon': reference/processing/etalon/index.md 
+                - 'EtalonData': reference/processing/etalon/etalondata.md 
+                - 'IntensityFitting': reference/processing/etalon/intensityfitting.md 
+                - 'TurnFinding': reference/processing/etalon/turnfinding.md 
+        - 'WMS': reference/wms.md
+        - 'Utilities': reference/utilities.md
+    

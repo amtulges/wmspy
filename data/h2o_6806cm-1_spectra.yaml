@@ -1,0 +1,26 @@
+spectral:
+    wavenumber                              : [6806.03, 6806.1085]
+    intensity                               : [0.2581216E-25, 0.0021065E-25]
+    lowerstateenergy                        : [3291.2, 3937.57]
+    referencetemperature                    : [296.0, 296.0]
+    widths                                  : [[0.205, 0.0105], [0.221, 0.0135]]
+    temperaturedependenceofwidths           : [[0.86, -0.108], [0.37, 0.37]]
+    pressureshifts                          : [[-0.0257, ], [-0.02486, ]]
+    temperaturedependenceofpressureshifts   : [[1.51, ], [1.51, ]]
+    acoefficient                            :
+
+quantum:
+    uppervibrationalquanta  :
+    lowervibrationalquanta  :
+    upperlocalquanta        :
+    lowerlocalquanta        :
+    errorcodes              :
+    referencecodes          :
+    flagforlinemixing       :
+    upperstatisticalweight  :
+    lowerstatisticalweight  :
+
+species:
+    molarmass           : [18, 18]
+    moleculenumber      :
+    isotopologuenumber  :

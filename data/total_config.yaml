@@ -1,0 +1,40 @@
+laser:
+    fs  : 1.0E+3                  # scan frequency (Hz)
+    fm  : [245.0E+3, 250.0E+3]    # modulation frequencies (Hz)
+
+daq:
+    sr  : 10.0E+6               # sample rate (Hz)
+    pre : 0                     # pretrigger points
+    npoints : 64000             # total points
+
+etalon:
+    sr  : 100.0E+6              # sample rate (Hz)
+    pre : 0                     # pretrigger points
+    npoints : 640000            # total points
+    fsr : 0.0162                # free spectral range (cm-1)
+
+filters:
+    passband    : 20000.0       # passband frequency (Hz)
+    stopband    : 40000.0       # stopband frequency (Hz)
+    passripple  : 0.1           # passband ripple (Hz)
+    stopripple  : 30            # stopband ripple (Hz)
+    nharmonics  : 2             # number of filter harmonics to create
+    multirate   : True          # single or multi rate (stage)
+    fir         : False         # fir or iir
+    ftype       :               # filter type e.g. kaiser
+
+folder : 'C:/Users/amtulges/Documents/H2O_TDLAS/RDE_TDLAS/07212022'
+
+files:
+    et      : [Ref1_Et1_1kHz.tdms, Ref2_Et2_1kHz.tdms]
+    ref     : [Ref1_Et1_1kHz.tdms, Ref2_Et2_1kHz.tdms]
+    bkg     : Bkg_1kHz.tdms
+    meas    : Run11.tdms
+    dark    :
+
+channels:
+    et      : [1, 1]
+    ref     : [0, 0]
+    bkg     : [0, 1]
+    meas    : [0, 1]
+    dark    :

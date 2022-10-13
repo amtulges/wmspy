@@ -1,0 +1,6 @@
+dataclasses
+matplotlib
+numpy
+pandas
+pathlib
+scipy

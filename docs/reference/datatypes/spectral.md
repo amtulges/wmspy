@@ -1,0 +1,1 @@
+::: wmspy.datatypes.spectral
